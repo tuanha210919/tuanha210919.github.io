@@ -9,6 +9,8 @@ body {
   margin-left:48px;
   color: white;
   text-align: center;
+  font-family: 'Pacifico';
+  font-size: 80px;
 }
 #clock .digit {font-size:64px;}
 
