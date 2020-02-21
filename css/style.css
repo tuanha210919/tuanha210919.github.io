@@ -5,6 +5,13 @@ body {
   background-position: 50%;
 }
 
+#clock{
+  margin-left:48px;
+  color: white;
+  text-align: center;
+}
+#clock .digit {font-size:64px;}
+
 .content {
     position: relative;
     z-index: 3;

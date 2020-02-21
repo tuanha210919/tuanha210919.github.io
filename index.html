@@ -11,7 +11,16 @@
     <link rel="stylesheet" href="css/spinload.css">
     <link rel="stylesheet" type="text/css" href=" https://fonts.googleapis.com/css?family=Pacifico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
+    
+    <script type="text/javascript" src="./renxi/jquery.min.js"></script>
+    <script type="text/javascript" src="renxi/jscex.min.js"></script>
+		<script type="text/javascript" src="renxi/jscex-parser.js"></script>
+		<script type="text/javascript" src="renxi/jscex-jit.js"></script>
+		<script type="text/javascript" src="renxi/jscex-builderbase.min.js"></script>
+		<script type="text/javascript" src="renxi/jscex-async.min.js"></script>s
+    <script type="text/javascript" src="renxi/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="renxi/functions.js" charset="utf-8"></script>
+
     <script language="JavaScript">
       var speed = 3000
       var Pic = new Array() // don't touch this
@@ -62,19 +71,44 @@
         <header>
           <h2>Hey, do you love me?</h2>
           <h4>If you say no ,you will see my gifts and If you say yes, you will receive my love. Please choose carefully :)</h4>
+          
+          <div id="clock"></div>
+          
         </header>
         <button id="yes" type="button" class="btn btn-danger btn-lg">Yesssssss, i love you so so much</button>
         <button id="no" type="button" class="btn btn-info btn-lg">No,i don't love you, give me presents</button>
       </div>
     </div>
+
+    <script>
+      (function(){
+          var textAnimate = eval(Jscex.compile("async", function () {
+          var together = new Date();
+          together.setFullYear(2019,09 , 21); 			
+          together.setHours(0);							
+          together.setMinutes(0);				
+          together.setSeconds(0);					
+          together.setMilliseconds(0);			    
+              $("#clock-box").fadeIn(500);
+              while (true) {
+                  timeElapse(together);
+                  $await(Jscex.Async.sleep(1000));
+              }
+          }));
+          var runAsync = eval(Jscex.compile("async", function () {
+              textAnimate().start();
+          }));
+          runAsync().start();
+      })();
+      </script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="js/myJs.js"></script>
+    <script  type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script  type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script   type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script  type="text/javascript" src="js/myJs.js"></script>
 
   </body>
 </html>
