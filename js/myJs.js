@@ -49,8 +49,8 @@ function timeElapse(date){
 	// var seconds = (Date.parse(current) - Date.parse(date))/ 1000;
     // var days = Math.floor(seconds / (3600 * 24));
     
-    var seconds = (Date.parse(current) - Date.parse(date))/ 857.790;
-    var days = Math.floor(seconds / (3600 * 24));
+    var seconds = (Date.parse(current) - Date.parse(date))/ 1000;
+    var days = Math.floor(seconds / (3600 * 24)) + 30;
 
 	seconds = seconds % (3600 * 24);
 	var hours = Math.floor(seconds / 3600);
@@ -67,7 +67,7 @@ function timeElapse(date){
 		seconds = "0" + seconds;
 	}
     // var result = "<span class=\"digit\">" + days + "</span> ngày <span class=\"digit\">" + hours + "</span> giờ <span class=\"digit\">" + minutes + "</span> phút <span class=\"digit\">" + seconds + "</span> giây"; 
-    var result = "<span class=\"digit\">" + days + "</span> ngày <span class=\"digit\">" + hours + "</span> giờ <span class=\"digit\">" + minutes + "</span> phút <span class=\"digit\">"; 
+    var result = "<span class=\"digit\">" + days + "</span> ngày <span class=\"digit\">" + hours + "</span> giờ <span class=\"digit\">" + minutes + "</span> phút <span class=\"digit\">" + seconds + "</span> giây"; 
 	$("#clock").html(result);
 }
 
