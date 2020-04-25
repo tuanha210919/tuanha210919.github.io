@@ -50,7 +50,7 @@ function timeElapse(date){
     // var days = Math.floor(seconds / (3600 * 24));
     
     var seconds = (Date.parse(current) - Date.parse(date))/ 1000;
-    var days = Math.floor(seconds / (3600 * 24)) + 30;
+    var days = Math.floor(seconds / (3600 * 24)) + 31;
 
 	seconds = seconds % (3600 * 24);
 	var hours = Math.floor(seconds / 3600);
